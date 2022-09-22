@@ -15,6 +15,11 @@ const Body = () => {
     AllFetchingData();
   }, []);
 
+  const getDelete = async(ids)=>{
+    await axios.delete(`https://travels-book.herokuapp.com/api/travel/${ids}`)
+    AllFetchingData()
+  }
+
   return (
     <Container>
       <Flexing>
